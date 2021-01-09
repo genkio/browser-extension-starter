@@ -1,0 +1,23 @@
+{
+  "name": "ReactJS Web Extension",
+  "description": "Using ReactJS and TypeScript to build a web extension",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icon-16x16.png",
+    "32": "icon-32x32.png",
+    "48": "icon-48x48.png",
+    "128": "icon-128x128.png"
+  },
+  "background": {
+    "scripts": ["./background.bundle.js"]
+  },
+  "options_page": "./options.html",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "version": "1.0"
+}
