@@ -3,8 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: "production",
-
   devServer: {
     contentBase: resolve(__dirname, "src"),
     historyApiFallback: true,

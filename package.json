@@ -4,10 +4,10 @@
   "description": "A web extension starter kit built with React and TypeScript",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack --watch --progress",
+    "dev": "webpack --config webpack.development.js --watch --progress",
     "lint": "eslint --fix -c ./.eslintrc.js \"src/**/*.ts*\"",
     "prebuild": "npm run lint && rimraf dist",
-    "build": "webpack",
+    "build": "webpack --config webpack.production.js",
     "prettify": "prettier --write \"src/**/*.ts*\""
   },
   "keywords": [
@@ -35,7 +35,8 @@
     "webextension-polyfill-ts": "^0.22.0",
     "webpack": "^5.11.1",
     "webpack-cli": "^4.3.1",
-    "webpack-dev-server": "^3.11.1"
+    "webpack-dev-server": "^3.11.1",
+    "webpack-merge": "^5.7.3"
   },
   "dependencies": {
     "react": "^17.0.1",
